@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 75px;
+    padding-right: 100px;
+    margin-left: 20px;
+}
+
+#nav {
+    height: 100px;
+    width: 100vw;
+    /* background-color: bisque; */
+    color: rgb(236, 236, 236);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    gap: 25px;
+    justify-content: flex-start;
+    /* margin-left: 10vw; */
+    font-size: 3vh;
+    font-weight: 900px;
+}
+
+#nav :hover {
+    cursor: pointer;
+    color: #637fe3;
+}
+
+
+.container1 video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+    position: fixed;
+}
+
+main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.249);
+}
+
+.page1 {
+    height: 100vh;
+    width: 100%;
+    /* background-color: rgba(223, 44, 24, 0.986); */
+    display: flex;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+.page1 h1 {
+    font-size: 7.5vw;
+    font-weight: 900;
+    position: relative;
+    color: rgba(207, 187, 187, 0.805);
+    -webkit-text-stroke: 1.5px #000000;
+    transition: all linear 0.3s;
+
+}
+
+.page1 h1 ::before {
+    content: Your Name;
+    /* position: absolute; */
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+}
+
+.page1 h1:hover {
+    color: #a18012;
+    -webkit-text-stroke: #000;
+}
+
+.page1 p {
+    font-size: 2vw;
+    font-weight: 500;
+    width: 40%;
+    color: bisque;
+
+}
+
+.page2 {
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+.scroll {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroll h4 {
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-right: 20px;
+    transition: all linear 0.6s;
+    color: #000;
+    -webkit-text-stroke: 2px #ffffff;
+}
+
+.scroll h4:hover {
+    color: #1e5ac1;
+    -webkit-text-stroke: 2px #0b0c4f;
+}
+
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+
+}
+
+.box1 {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    justify-content: space-around;
+    /* background: red; */
+    margin-top: 20vh;
+
+}
+
+.box1 img {
+    margin: 0;
+    padding: 0;
+    height: 47vh;
+    border-radius: 30px;
+    object-fit: cover;
+
+}
+
+.about {
+    color: #ffffff;
+    text-align: center;
+    padding: 0 10vw;
+}
+
+.about h4 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.about p {
+    font-size: 1.2vw;
+    line-height: 5vh;
+}
+
+.cards-container {
+    margin-top: 20vh;
+    /* background-color: red; */
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    background: blue;
+    height: 80%;
+    width: 20vw;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+
+#card1 {
+    background-image: url(https://m.media-amazon.com/images/M/MV5BMTQzMzgzMDcwOF5BMl5BanBnXkFtZTgwMzU0NTA3MDE@._V1_FMjpg_UY1500_.jpg);
+
+}
+
+#card2 {
+    background-image: url("https://m.media-amazon.com/images/M/MV5BZjc2NmExYWEtMTllNi00NTc5LTliZDgtMWRmMjQzMjg1NDJmXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_.jpg");
+
+}
+
+#card3 {
+    background-image: url(https://stevivor.com/wp-content/uploads/2022/07/god-of-war-ragnarok.jpg);
+
+}
+.shadow{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right bottom, #1035c6, #ee3434);
+    color: rgb(33, 24, 24);
+    padding: 2vh;
+    padding-top: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.shadow h4{
+    font-size: 2.2vw;
+    font-weight: 600;
+    padding-bottom: 2vw;
+    text-align: center;
+    /* white-space: nowrap; */
+}
+.shadow p{
+    font-size: 1.1vw;
+    text-align: center;
+}
+.shadow:hover{
+    opacity: 85%;
+}
+.card:hover {
+    transform: rotate3d(-1, 1, 0, 15deg);
+    
+  }
